@@ -11,6 +11,8 @@ services:
             - ./:/var/www/app
         depends_on:
             - app_class_management
+        networks:
+            - backend
 
     app_class_management:
         container_name: app_class_management
@@ -33,6 +35,8 @@ services:
             UID: ${UID:-1000}
             GID: ${GID:-1001}
             CORS_ALLOW_ORIGIN: '*'
+        networks:
+            - backend
 
     postgres_class_management:
         container_name: postgres_class_management
@@ -46,6 +50,8 @@ services:
             POSTGRES_DB: ${POSTGRES_DB:-postgres}
         ports:
             - "5433:5432"
+        networks:
+            - backend
 
     pgadmin_class_management:
         container_name: pgadmin_class_management
@@ -68,6 +74,8 @@ services:
         volumes:
             - ./.docker/redis/data:/data
             - ./.docker/dev/redis/redis.conf:/usr/local/etc/redis/redis.conf
+        networks:
+            - backend
 
     mailcatcher_class_management:
         container_name: mailcatcher_class_management
@@ -76,3 +84,6 @@ services:
         ports:
             - "1080:1080"
             - "1025:1025"
+
+networks:
+    backend:
