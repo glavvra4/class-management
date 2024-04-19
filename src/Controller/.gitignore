@@ -1,0 +1,6 @@
+/redis/
+/postgres/
+
+# PhpStorm / IDEA
+.idea/
+.DS_Store
