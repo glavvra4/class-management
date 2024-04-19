@@ -8,9 +8,8 @@
 /vendor/
 ###< symfony/framework-bundle ###
 
-# Services
-/redis/
-/postgres/
+/.docker/postgresql/data/
+/.docker/redis/data/
 
 # PhpStorm / IDEA
 .idea/
