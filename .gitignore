@@ -8,7 +8,7 @@
 /vendor/
 ###< symfony/framework-bundle ###
 
-/.docker/postgresql/data/
+/.docker/postgres/data/
 /.docker/redis/data/
 
 # PhpStorm / IDEA

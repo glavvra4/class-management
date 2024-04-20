@@ -1,2 +1,10 @@
 sonata_block:
     http_cache: false
+    exception:
+        default:
+            renderer: throw
+            filter: keep_all
+        renderers:
+            inline: sonata.block.exception.renderer.inline
+            inline_debug: sonata.block.exception.renderer.inline_debug
+            throw: sonata.block.exception.renderer.throw

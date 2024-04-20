@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="admin.group_management">
+                <source>admin.group_management</source>
+                <target>Управление</target>
+            </trans-unit>
+            <trans-unit id="admin.child_student">
+                <source>admin.child_student</source>
+                <target>Ученики</target>
+            </trans-unit>
+            <trans-unit id="breadcrumb.link_student_list">
+                <source>breadcrumb.link_student_list</source>
+                <target>Список учеников</target>
+            </trans-unit>
+            <trans-unit id="breadcrumb.link_student_create">
+                <source>breadcrumb.link_student_create</source>
+                <target>Создать ученика</target>
+            </trans-unit>
+            <trans-unit id="show.group_student">
+                <source>show.group_student</source>
+                <target>Данные ученика</target>
+            </trans-unit>
+            <trans-unit id="form.group_student">
+                <source>form.group_student</source>
+                <target>Данные ученика</target>
+            </trans-unit>
+            <trans-unit id="form.label_student">
+                <source>form.label_student</source>
+                <target>Ученик</target>
+            </trans-unit>
+            <trans-unit id="admin.child_fundraising">
+                <source>admin.child_fundraising</source>
+                <target>Сборы</target>
+            </trans-unit>
+            <trans-unit id="breadcrumb.link_fundraising_list">
+                <source>breadcrumb.link_fundraising_list</source>
+                <target>Список сборов</target>
+            </trans-unit>
+            <trans-unit id="breadcrumb.link_fundraising_create">
+                <source>breadcrumb.link_fundraising_create</source>
+                <target>Создать сбор</target>
+            </trans-unit>
+            <trans-unit id="show.group_fundraising">
+                <source>show.group_fundraising</source>
+                <target>Данные сбора</target>
+            </trans-unit>
+            <trans-unit id="form.group_fundraising">
+                <source>form.group_fundraising</source>
+                <target>Данные сбора</target>
+            </trans-unit>
+            <trans-unit id="form.label_fundraising">
+                <source>form.label_fundraising</source>
+                <target>Сбор</target>
+            </trans-unit>
+            <trans-unit id="admin.child_contribution">
+                <source>admin.child_contribution</source>
+                <target>Взносы</target>
+            </trans-unit>
+            <trans-unit id="breadcrumb.link_contribution_list">
+                <source>breadcrumb.link_contribution_list</source>
+                <target>Список взносов</target>
+            </trans-unit>
+            <trans-unit id="breadcrumb.link_contribution_create">
+                <source>breadcrumb.link_contribution_create</source>
+                <target>Создать взнос</target>
+            </trans-unit>
+            <trans-unit id="show.group_contribution">
+                <source>show.group_contribution</source>
+                <target>Данные взноса</target>
+            </trans-unit>
+            <trans-unit id="form.group_contribution">
+                <source>form.group_contribution</source>
+                <target>Данные взноса</target>
+            </trans-unit>
+            <trans-unit id="form.label_contribution">
+                <source>form.label_contribution</source>
+                <target>Взнос</target>
+            </trans-unit>
+            <trans-unit id="admin.child_expenditure">
+                <source>admin.child_expenditure</source>
+                <target>Расходы</target>
+            </trans-unit>
+            <trans-unit id="breadcrumb.link_expenditure_list">
+                <source>breadcrumb.link_expenditure_list</source>
+                <target>Список расходов</target>
+            </trans-unit>
+            <trans-unit id="breadcrumb.link_expenditure_create">
+                <source>breadcrumb.link_expenditure_create</source>
+                <target>Создать расход</target>
+            </trans-unit>
+            <trans-unit id="show.group_expenditure">
+                <source>show.group_expenditure</source>
+                <target>Данные расхода</target>
+            </trans-unit>
+            <trans-unit id="form.group_expenditure">
+                <source>form.group_expenditure</source>
+                <target>Данные расхода</target>
+            </trans-unit>
+            <trans-unit id="form.label_expenditure">
+                <source>form.label_expenditure</source>
+                <target>Расход</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

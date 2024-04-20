@@ -1,24 +1,42 @@
-# This file is the entry point to configure your own services.
-# Files in the packages/ subdirectory configure your dependencies.
-
-# Put parameters here that don't need to change on each machine where the app is deployed
-# https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
 parameters:
 
 services:
-    # default configuration for services in *this* file
     _defaults:
-        autowire: true      # Automatically injects dependencies in your services.
-        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+        autowire: true
+        autoconfigure: true
 
-    # makes classes in src/ available to be used as services
-    # this creates a service per class whose id is the fully-qualified class name
     App\:
         resource: '../src/'
         exclude:
             - '../src/DependencyInjection/'
+            - '../src/AdminBundle/DependencyInjection/'
             - '../src/Entity/'
             - '../src/Kernel.php'
 
-    # add more service definitions when explicit configuration is needed
-    # please note that last definitions always *replace* previous ones
+    admin.fundraising:
+        class: App\AdminBundle\Admin\FundraisingAdmin
+        calls:
+            - setTranslationDomain: ['SonataAdminBundle']
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\Fundraising, manager_type: orm, group: admin.group_management, label:  admin.child_fundraising, label_translator_strategy: sonata.admin.label.strategy.underscore }
+
+    admin.contribution:
+        class: App\AdminBundle\Admin\ContributionAdmin
+        calls:
+            - setTranslationDomain: ['SonataAdminBundle']
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\Contribution, manager_type: orm, group: admin.group_management, label:  admin.child_contribution, label_translator_strategy: sonata.admin.label.strategy.underscore }
+
+    admin.expenditure:
+        class: App\AdminBundle\Admin\ExpenditureAdmin
+        calls:
+            -   setTranslationDomain: [ 'SonataAdminBundle' ]
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\Expenditure, manager_type: orm, group: admin.group_management, label: admin.child_expenditure, label_translator_strategy: sonata.admin.label.strategy.underscore }
+
+    admin.student:
+        class: App\AdminBundle\Admin\StudentAdmin
+        calls:
+            - setTranslationDomain: ['SonataAdminBundle']
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\Student, manager_type: orm, group: admin.group_management, label:  admin.child_student, label_translator_strategy: sonata.admin.label.strategy.underscore }

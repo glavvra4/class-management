@@ -40,7 +40,7 @@
         "files": [
             "config/packages/sonata_admin.yaml",
             "config/routes/sonata_admin.yaml",
-            "src/Admin/.gitignore"
+            "src/AdminBundle/.gitignore"
         ]
     },
     "sonata-project/block-bundle": {
@@ -63,6 +63,9 @@
             "version": "1.8",
             "ref": "4ea4a4b6730f83239608d7d4c849533645c70169"
         }
+    },
+    "sonata-project/doctrine-orm-admin-bundle": {
+        "version": "4.17.0"
     },
     "sonata-project/exporter": {
         "version": "3.3",
@@ -93,6 +96,9 @@
             "version": "1.2",
             "ref": "30dba2f9b719f21b497a6302f41aac07f9079e13"
         }
+    },
+    "sonata-project/user-bundle": {
+        "version": "5.12.0"
     },
     "symfony/console": {
         "version": "6.4",
@@ -135,6 +141,18 @@
             "public/index.php",
             "src/Controller/.gitignore",
             "src/Kernel.php"
+        ]
+    },
+    "symfony/mailer": {
+        "version": "6.4",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "4.3",
+            "ref": "df66ee1f226c46f01e85c29c2f7acce0596ba35a"
+        },
+        "files": [
+            "config/packages/mailer.yaml"
         ]
     },
     "symfony/maker-bundle": {
