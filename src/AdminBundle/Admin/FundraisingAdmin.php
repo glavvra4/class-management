@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\AdminBundle\Admin;
 
+use App\Entity\Fundraising;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\FieldDescription\FieldDescriptionInterface;
@@ -14,6 +15,7 @@ use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\MoneyType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 
+/** @extends AbstractAdmin<Fundraising> */
 class FundraisingAdmin extends AbstractAdmin
 {
     protected function configureFormFields(FormMapper $form): void
@@ -58,6 +60,7 @@ class FundraisingAdmin extends AbstractAdmin
             ->add('contributionsAmountPerParticipant', FieldDescriptionInterface::TYPE_CURRENCY, [
                 'label' => 'Сумма взносов на 1 участника',
                 'currency' => '₽',
+                'accessor' => fn (Fundraising $subject) => round($subject->getContributionsAmountPerParticipant(), 2),
             ])
             ->add('totalExpendituresAmount', FieldDescriptionInterface::TYPE_CURRENCY, [
                 'label' => 'Общая сумма расходов',
@@ -66,6 +69,7 @@ class FundraisingAdmin extends AbstractAdmin
             ->add('expendituresAmountPerParticipant', FieldDescriptionInterface::TYPE_CURRENCY, [
                 'label' => 'Сумма расходов на 1 участника',
                 'currency' => '₽',
+                'accessor' => fn (Fundraising $subject) => round($subject->getExpendituresAmountPerParticipant(), 2),
             ])
             ->add('totalRemainingAmount', FieldDescriptionInterface::TYPE_CURRENCY, [
                 'label' => 'Общий остаток',
@@ -100,6 +104,7 @@ class FundraisingAdmin extends AbstractAdmin
             ->add('contributionsAmountPerParticipant', FieldDescriptionInterface::TYPE_CURRENCY, [
                 'label' => 'Сумма взносов на 1 участника',
                 'currency' => '₽',
+                'accessor' => fn (Fundraising $subject) => round($subject->getContributionsAmountPerParticipant(), 2),
             ])
             ->add('totalExpendituresAmount', FieldDescriptionInterface::TYPE_CURRENCY, [
                 'label' => 'Общая сумма расходов',
@@ -108,6 +113,7 @@ class FundraisingAdmin extends AbstractAdmin
             ->add('expendituresAmountPerParticipant', FieldDescriptionInterface::TYPE_CURRENCY, [
                 'label' => 'Сумма расходов на 1 участника',
                 'currency' => '₽',
+                'accessor' => fn (Fundraising $subject) => round($subject->getExpendituresAmountPerParticipant(), 2),
             ])
             ->add('totalRemainingAmount', FieldDescriptionInterface::TYPE_CURRENCY, [
                 'label' => 'Общий остаток',

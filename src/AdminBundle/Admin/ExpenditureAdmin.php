@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\AdminBundle\Admin;
 
+use App\Entity\Expenditure;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\FieldDescription\FieldDescriptionInterface;
@@ -16,6 +17,7 @@ use Symfony\Component\Form\Extension\Core\Type\MoneyType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 
+/** @extends AbstractAdmin<Expenditure> */
 class ExpenditureAdmin extends AbstractAdmin
 {
     protected function configureFormFields(FormMapper $form): void

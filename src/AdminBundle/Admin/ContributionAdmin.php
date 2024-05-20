@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\AdminBundle\Admin;
 
+use App\Entity\Contribution;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\FieldDescription\FieldDescriptionInterface;
@@ -13,8 +14,8 @@ use Sonata\AdminBundle\Show\ShowMapper;
 use Sonata\Form\Type\DatePickerType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\MoneyType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
 
+/** @extends AbstractAdmin<Contribution> */
 class ContributionAdmin extends AbstractAdmin
 {
     protected function configureFormFields(FormMapper $form): void
