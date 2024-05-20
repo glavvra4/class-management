@@ -121,6 +121,16 @@ class Fundraising
         return $total;
     }
 
+    public function getContributionsAmountPerParticipant(): float
+    {
+        $totalAmount = 0;
+        foreach ($this->contributions as $contribution) {
+            $totalAmount += $contribution->getAmount() ?? 0;
+        }
+
+        return $totalAmount / $this->participants->count();
+    }
+
     /**
      * @return Collection<int, Expenditure>
      */
@@ -159,6 +169,16 @@ class Fundraising
         }
 
         return $total;
+    }
+
+    public function getExpendituresAmountPerParticipant(): float
+    {
+        $totalAmount = 0;
+        foreach ($this->expenditures as $expenditure) {
+            $totalAmount += $expenditure->getAmount() ?? 0;
+        }
+
+        return $totalAmount / $this->participants->count();
     }
 
     public function getTotalRemainingAmount(): float

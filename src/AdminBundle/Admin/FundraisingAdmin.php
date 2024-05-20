@@ -55,8 +55,16 @@ class FundraisingAdmin extends AbstractAdmin
                 'label' => 'Общая сумма взносов',
                 'currency' => '₽',
             ])
+            ->add('contributionsAmountPerParticipant', FieldDescriptionInterface::TYPE_CURRENCY, [
+                'label' => 'Сумма взносов на 1 участника',
+                'currency' => '₽',
+            ])
             ->add('totalExpendituresAmount', FieldDescriptionInterface::TYPE_CURRENCY, [
                 'label' => 'Общая сумма расходов',
+                'currency' => '₽',
+            ])
+            ->add('expendituresAmountPerParticipant', FieldDescriptionInterface::TYPE_CURRENCY, [
+                'label' => 'Сумма расходов на 1 участника',
                 'currency' => '₽',
             ])
             ->add('totalRemainingAmount', FieldDescriptionInterface::TYPE_CURRENCY, [
@@ -89,8 +97,16 @@ class FundraisingAdmin extends AbstractAdmin
                 'label' => 'Общая сумма взносов',
                 'currency' => '₽',
             ])
+            ->add('contributionsAmountPerParticipant', FieldDescriptionInterface::TYPE_CURRENCY, [
+                'label' => 'Сумма взносов на 1 участника',
+                'currency' => '₽',
+            ])
             ->add('totalExpendituresAmount', FieldDescriptionInterface::TYPE_CURRENCY, [
                 'label' => 'Общая сумма расходов',
+                'currency' => '₽',
+            ])
+            ->add('expendituresAmountPerParticipant', FieldDescriptionInterface::TYPE_CURRENCY, [
+                'label' => 'Сумма расходов на 1 участника',
                 'currency' => '₽',
             ])
             ->add('totalRemainingAmount', FieldDescriptionInterface::TYPE_CURRENCY, [
